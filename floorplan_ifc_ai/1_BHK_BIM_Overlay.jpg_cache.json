@@ -2,148 +2,160 @@
     "building_name": "Floor Plan: 1_BHK_BIM_Overlay.jpg",
     "walls": [
         {
+            "wall_id": "wall_ext_left",
+            "start_pt": [
+                0.0,
+                0.0
+            ],
+            "end_pt": [
+                0.0,
+                360.0
+            ],
+            "thickness": 6.0
+        },
+        {
+            "wall_id": "wall_ext_right",
+            "start_pt": [
+                240.0,
+                0.0
+            ],
+            "end_pt": [
+                240.0,
+                360.0
+            ],
+            "thickness": 6.0
+        },
+        {
             "wall_id": "wall_ext_bottom",
             "start_pt": [
                 0.0,
                 0.0
             ],
             "end_pt": [
-                20.0,
+                240.0,
                 0.0
             ],
-            "thickness": 0.75
-        },
-        {
-            "wall_id": "wall_ext_right",
-            "start_pt": [
-                20.0,
-                0.0
-            ],
-            "end_pt": [
-                20.0,
-                30.0
-            ],
-            "thickness": 0.75
+            "thickness": 6.0
         },
         {
             "wall_id": "wall_ext_top",
             "start_pt": [
-                20.0,
-                30.0
+                0.0,
+                360.0
             ],
             "end_pt": [
-                0.0,
-                30.0
+                240.0,
+                360.0
             ],
-            "thickness": 0.75
+            "thickness": 6.0
         },
         {
-            "wall_id": "wall_ext_left",
+            "wall_id": "wall_int_v1",
             "start_pt": [
-                0.0,
-                30.0
-            ],
-            "end_pt": [
-                0.0,
-                0.0
-            ],
-            "thickness": 0.75
-        },
-        {
-            "wall_id": "wall_int_v_mid",
-            "start_pt": [
-                10.5,
-                14.5
-            ],
-            "end_pt": [
-                10.5,
-                30.0
-            ],
-            "thickness": 0.5
-        },
-        {
-            "wall_id": "wall_int_v_parking",
-            "start_pt": [
-                8.5,
+                96.0,
                 0.0
             ],
             "end_pt": [
-                8.5,
-                14.5
+                96.0,
+                182.0
             ],
-            "thickness": 0.5
+            "thickness": 6.0
         },
         {
-            "wall_id": "wall_int_v_toilet",
+            "wall_id": "wall_int_v2",
             "start_pt": [
-                7.5,
-                14.5
+                123.0,
+                228.0
             ],
             "end_pt": [
-                7.5,
-                18.5
+                123.0,
+                360.0
             ],
-            "thickness": 0.5
+            "thickness": 6.0
         },
         {
-            "wall_id": "wall_int_h_bed_bottom",
-            "start_pt": [
-                0.0,
-                18.5
-            ],
-            "end_pt": [
-                10.5,
-                18.5
-            ],
-            "thickness": 0.5
-        },
-        {
-            "wall_id": "wall_int_h_toilet_bottom",
+            "wall_id": "wall_int_h1",
             "start_pt": [
                 0.0,
-                14.5
+                162.0
             ],
             "end_pt": [
-                7.5,
-                14.5
+                96.0,
+                162.0
             ],
-            "thickness": 0.5
+            "thickness": 6.0
         },
         {
-            "wall_id": "wall_int_h_kitchen_bottom",
+            "wall_id": "wall_int_h2",
             "start_pt": [
-                10.5,
-                14.5
+                0.0,
+                228.0
             ],
             "end_pt": [
-                20.0,
-                14.5
+                123.0,
+                228.0
             ],
-            "thickness": 0.5
+            "thickness": 6.0
         },
         {
-            "wall_id": "wall_int_h_wash_bottom",
+            "wall_id": "wall_int_h3",
             "start_pt": [
-                15.0,
-                25.0
+                96.0,
+                182.0
             ],
             "end_pt": [
-                20.0,
-                25.0
+                240.0,
+                182.0
             ],
-            "thickness": 0.5
+            "thickness": 6.0
         },
         {
-            "wall_id": "wall_int_v_wash_left",
+            "wall_id": "wall_wash_v",
             "start_pt": [
-                15.0,
-                25.0
+                180.0,
+                300.0
             ],
             "end_pt": [
-                15.0,
-                30.0
+                180.0,
+                360.0
             ],
-            "thickness": 0.5
+            "thickness": 6.0
+        },
+        {
+            "wall_id": "wall_wash_h",
+            "start_pt": [
+                180.0,
+                300.0
+            ],
+            "end_pt": [
+                240.0,
+                300.0
+            ],
+            "thickness": 6.0
+        },
+        {
+            "wall_id": "wall_toilet_v",
+            "start_pt": [
+                80.0,
+                180.0
+            ],
+            "end_pt": [
+                80.0,
+                228.0
+            ],
+            "thickness": 4.0
+        },
+        {
+            "wall_id": "wall_toilet_h",
+            "start_pt": [
+                0.0,
+                180.0
+            ],
+            "end_pt": [
+                80.0,
+                180.0
+            ],
+            "thickness": 4.0
         }
     ],
     "openings": [
@@ -151,111 +163,111 @@
             "id": "door_main",
             "type": "door",
             "location_pt": [
-                12.0,
+                140.0,
                 0.0
             ],
-            "width": 3.0,
-            "height": 7.0,
+            "width": 36.0,
+            "height": 84.0,
             "parent_wall_id": "wall_ext_bottom"
         },
         {
             "id": "door_parking",
             "type": "door",
             "location_pt": [
-                4.0,
+                46.0,
                 0.0
             ],
-            "width": 7.0,
-            "height": 7.0,
+            "width": 72.0,
+            "height": 84.0,
             "parent_wall_id": "wall_ext_bottom"
         },
         {
             "id": "door_bedroom",
             "type": "door",
             "location_pt": [
-                10.5,
-                21.0
+                110.0,
+                228.0
             ],
-            "width": 3.0,
-            "height": 7.0,
-            "parent_wall_id": "wall_int_v_mid"
+            "width": 32.0,
+            "height": 80.0,
+            "parent_wall_id": "wall_int_h2"
         },
         {
             "id": "door_toilet",
             "type": "door",
             "location_pt": [
-                7.5,
-                16.5
+                80.0,
+                204.0
             ],
-            "width": 2.5,
-            "height": 7.0,
-            "parent_wall_id": "wall_int_v_toilet"
+            "width": 28.0,
+            "height": 80.0,
+            "parent_wall_id": "wall_toilet_v"
         },
         {
             "id": "door_kitchen",
             "type": "door",
             "location_pt": [
-                10.5,
-                16.0
+                123.0,
+                330.0
             ],
-            "width": 3.0,
-            "height": 7.0,
-            "parent_wall_id": "wall_int_v_mid"
+            "width": 32.0,
+            "height": 80.0,
+            "parent_wall_id": "wall_int_v2"
         },
         {
             "id": "door_wash",
             "type": "door",
             "location_pt": [
-                15.0,
-                27.5
+                210.0,
+                300.0
             ],
-            "width": 2.5,
-            "height": 7.0,
-            "parent_wall_id": "wall_int_v_wash_left"
+            "width": 30.0,
+            "height": 80.0,
+            "parent_wall_id": "wall_wash_h"
         },
         {
-            "id": "win_bedroom",
+            "id": "window_bedroom",
             "type": "window",
             "location_pt": [
-                5.0,
-                30.0
+                60.0,
+                360.0
             ],
-            "width": 4.0,
-            "height": 4.0,
+            "width": 48.0,
+            "height": 48.0,
             "parent_wall_id": "wall_ext_top"
         },
         {
-            "id": "win_kitchen",
+            "id": "window_kitchen",
             "type": "window",
             "location_pt": [
-                20.0,
-                20.0
+                240.0,
+                280.0
             ],
-            "width": 4.0,
-            "height": 4.0,
+            "width": 36.0,
+            "height": 36.0,
             "parent_wall_id": "wall_ext_right"
         },
         {
-            "id": "win_living",
+            "id": "window_living_side",
             "type": "window",
             "location_pt": [
-                20.0,
-                8.0
+                240.0,
+                100.0
             ],
-            "width": 4.0,
-            "height": 4.0,
+            "width": 48.0,
+            "height": 48.0,
             "parent_wall_id": "wall_ext_right"
         },
         {
-            "id": "win_toilet",
+            "id": "window_living_bottom",
             "type": "window",
             "location_pt": [
-                0.0,
-                16.5
+                180.0,
+                0.0
             ],
-            "width": 2.0,
-            "height": 2.0,
-            "parent_wall_id": "wall_ext_left"
+            "width": 48.0,
+            "height": 48.0,
+            "parent_wall_id": "wall_ext_bottom"
         }
     ],
     "interiors": [
@@ -263,130 +275,117 @@
             "id": "bed_1",
             "category": "furnishing",
             "location_pt": [
-                5.0,
-                25.0
+                60.0,
+                300.0
             ],
             "dimensions": [
-                6.0,
-                7.0,
-                1.5
+                72.0,
+                78.0,
+                20.0
             ]
         },
         {
             "id": "sofa_1",
             "category": "furnishing",
             "location_pt": [
-                18.5,
-                6.0
+                210.0,
+                60.0
             ],
             "dimensions": [
-                1.5,
-                6.0,
-                3.0
+                30.0,
+                72.0,
+                30.0
             ]
         },
         {
             "id": "sofa_2",
             "category": "furnishing",
             "location_pt": [
-                15.0,
-                1.5
+                160.0,
+                20.0
             ],
             "dimensions": [
-                5.0,
-                1.5,
-                3.0
+                60.0,
+                30.0,
+                30.0
             ]
         },
         {
             "id": "dining_table",
             "category": "furnishing",
             "location_pt": [
-                15.0,
-                10.0
+                160.0,
+                120.0
             ],
             "dimensions": [
-                4.0,
-                3.0,
-                2.5
+                48.0,
+                36.0,
+                30.0
             ]
         },
         {
-            "id": "kitchen_sink",
+            "id": "toilet_1",
             "category": "sanitary",
             "location_pt": [
-                13.0,
-                24.0
+                20.0,
+                204.0
             ],
             "dimensions": [
-                2.0,
-                1.5,
-                3.0
-            ]
-        },
-        {
-            "id": "stove",
-            "category": "appliance",
-            "location_pt": [
-                18.5,
-                20.0
-            ],
-            "dimensions": [
-                2.0,
-                2.0,
-                3.0
-            ]
-        },
-        {
-            "id": "fridge",
-            "category": "appliance",
-            "location_pt": [
-                18.5,
-                17.0
-            ],
-            "dimensions": [
-                2.0,
-                2.0,
-                6.0
-            ]
-        },
-        {
-            "id": "toilet_commode",
-            "category": "sanitary",
-            "location_pt": [
-                2.0,
-                17.0
-            ],
-            "dimensions": [
-                1.5,
-                2.0,
-                1.5
-            ]
-        },
-        {
-            "id": "wash_basin",
-            "category": "sanitary",
-            "location_pt": [
-                6.0,
+                20.0,
+                28.0,
                 16.0
-            ],
-            "dimensions": [
-                1.5,
-                1.5,
-                3.0
             ]
         },
         {
-            "id": "working_desk",
+            "id": "sink_kitchen",
+            "category": "sanitary",
+            "location_pt": [
+                140.0,
+                340.0
+            ],
+            "dimensions": [
+                30.0,
+                20.0,
+                8.0
+            ]
+        },
+        {
+            "id": "stove_1",
+            "category": "appliance",
+            "location_pt": [
+                220.0,
+                280.0
+            ],
+            "dimensions": [
+                24.0,
+                24.0,
+                36.0
+            ]
+        },
+        {
+            "id": "fridge_1",
+            "category": "appliance",
+            "location_pt": [
+                220.0,
+                220.0
+            ],
+            "dimensions": [
+                30.0,
+                30.0,
+                66.0
+            ]
+        },
+        {
+            "id": "desk_working",
             "category": "furnishing",
             "location_pt": [
-                9.5,
-                17.0
+                110.0,
+                280.0
             ],
             "dimensions": [
-                1.0,
-                3.0,
-                2.5
+                18.0,
+                48.0,
+                30.0
             ]
         }
     ]

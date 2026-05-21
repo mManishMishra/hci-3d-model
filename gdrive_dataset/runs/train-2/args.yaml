@@ -1,7 +1,7 @@
 task: segment
 mode: train
 model: yolov8n-seg.pt
-data: I:\projects\hci-3d-model-project\gdrive_dataset\dataset.yaml
+data: I:\projects\hci-3d-code\gdrive_dataset\dataset.yaml
 epochs: 50
 time: null
 patience: 100
@@ -12,7 +12,7 @@ save_period: -1
 cache: false
 device: cpu
 workers: 0
-project: I:\projects\hci-3d-model-project\gdrive_dataset\runs
+project: I:\projects\hci-3d-code\gdrive_dataset\runs
 name: train-2
 exist_ok: false
 pretrained: true
@@ -107,4 +107,4 @@ auto_augment: randaugment
 erasing: 0.4
 cfg: null
 tracker: botsort.yaml
-save_dir: I:\projects\hci-3d-model-project\gdrive_dataset\runs\train-2
+save_dir: I:\projects\hci-3d-code\gdrive_dataset\runs\train-2

@@ -23,7 +23,8 @@ from fastapi.middleware.cors import CORSMiddleware
 import cv2, numpy as np
 
 from config.classes import CLASS_IDS, ID_TO_CLASS
-from auto_label import generate_labels, draw_labelled_image, contour_to_yolo_seg
+# from auto_label import generate_labels, draw_labelled_image, contour_to_yolo_seg
+from logic.auto_label import generate_labels, draw_labelled_image, contour_to_yolo_seg
 from logic.room_text_mapper import analyse_image, draw_text_mapping_overlay
 from logic.floor_plan_analyzer import analyse_floor_plan, draw_analysis_overlay, extract_text_seeds
 
@@ -236,7 +237,9 @@ def _autolabel_worker(selected_files: list = None, metadata_choice: str = "local
             was_corrected = enhanced.get("_analyzer_used", False)
 
             # Rebuild label lines from enriched labelled dict
-            from auto_label import contour_to_yolo_seg
+            # from auto_label import contour_to_yolo_seg
+            # Rebuild label lines from enriched labelled dict
+            from logic.auto_label import contour_to_yolo_seg
             img_h2, img_w2 = img.shape[:2]
             label_lines = []
             for cls_name, contours in labelled.items():
@@ -803,7 +806,8 @@ async def analyse_endpoint(file: UploadFile = File(...)):
 @app.get("/", response_class=HTMLResponse)
 def index():
     html_path = WEB_DIR / "index.html"
-    return html_path.read_text()
+    # return html_path.read_text()
+    return html_path.read_text(encoding="utf-8")
 
 if __name__ == "__main__":
     import uvicorn

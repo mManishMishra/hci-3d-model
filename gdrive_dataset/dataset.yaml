@@ -1,4 +1,4 @@
-path: I:\projects\hci-3d-model-project\gdrive_dataset
+path: I:\projects\hci-3d-code\gdrive_dataset
 train: images/train
 val: images/train
 test: images/train
