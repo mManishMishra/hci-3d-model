@@ -1,0 +1,446 @@
+{
+  "dataset": {
+    "cleaned_images": 347,
+    "analyzed_images": 314,
+    "analysis_csv": "data\\analysis_all_images.csv",
+    "has_furniture_plans": 80,
+    "line_drawing_plans": 271,
+    "furnished_color_plans": 42
+  },
+  "raw_analysis_labels": {
+    "door": 314,
+    "wall": 314,
+    "bathroom": 313,
+    "bedroom": 313,
+    "kitchen": 313,
+    "living_room": 313,
+    "window": 313,
+    "bed": 80,
+    "chair": 80,
+    "sink": 80,
+    "sofa": 80,
+    "stove": 80,
+    "table": 80,
+    "toilet": 80,
+    "wardrobe": 80
+  },
+  "analysis_aliases": {
+    "table": "dining_table",
+    "toilet": "wc"
+  },
+  "train_now_count": 7,
+  "train_later_count": 30,
+  "train_now": [
+    "wall",
+    "door",
+    "window",
+    "bedroom",
+    "living_room",
+    "kitchen",
+    "bathroom"
+  ],
+  "train_later": [
+    "column",
+    "stair",
+    "master_bedroom",
+    "dining_room",
+    "toilet",
+    "balcony",
+    "utility",
+    "corridor",
+    "bed",
+    "wardrobe",
+    "sofa",
+    "chair",
+    "dining_table",
+    "coffee_table",
+    "study_table",
+    "tv_unit",
+    "side_table",
+    "dresser",
+    "storage_unit",
+    "cabinet",
+    "wc",
+    "wash_basin",
+    "shower",
+    "bathtub",
+    "sink",
+    "stove",
+    "refrigerator",
+    "washing_machine",
+    "microwave",
+    "chimney"
+  ],
+  "classes": [
+    {
+      "name": "wall",
+      "group": "structural",
+      "images_with_class": 314,
+      "total_images": 314,
+      "image_rate": 1.0,
+      "train_phase": "train_now",
+      "yolo_id": 0,
+      "analysis_source": "analysis label 'wall'"
+    },
+    {
+      "name": "door",
+      "group": "structural",
+      "images_with_class": 314,
+      "total_images": 314,
+      "image_rate": 1.0,
+      "train_phase": "train_now",
+      "yolo_id": 1,
+      "analysis_source": "analysis label 'door'"
+    },
+    {
+      "name": "window",
+      "group": "structural",
+      "images_with_class": 313,
+      "total_images": 314,
+      "image_rate": 0.9968,
+      "train_phase": "train_now",
+      "yolo_id": 2,
+      "analysis_source": "analysis label 'window'"
+    },
+    {
+      "name": "column",
+      "group": "structural",
+      "images_with_class": 0,
+      "total_images": 314,
+      "image_rate": 0.0,
+      "train_phase": "train_later",
+      "yolo_id": 3,
+      "analysis_source": null
+    },
+    {
+      "name": "stair",
+      "group": "structural",
+      "images_with_class": 0,
+      "total_images": 314,
+      "image_rate": 0.0,
+      "train_phase": "train_later",
+      "yolo_id": 4,
+      "analysis_source": null
+    },
+    {
+      "name": "bedroom",
+      "group": "rooms",
+      "images_with_class": 313,
+      "total_images": 314,
+      "image_rate": 0.9968,
+      "train_phase": "train_now",
+      "yolo_id": 5,
+      "analysis_source": "analysis label 'bedroom'"
+    },
+    {
+      "name": "master_bedroom",
+      "group": "rooms",
+      "images_with_class": 0,
+      "total_images": 314,
+      "image_rate": 0.0,
+      "train_phase": "train_later",
+      "yolo_id": 6,
+      "analysis_source": null
+    },
+    {
+      "name": "living_room",
+      "group": "rooms",
+      "images_with_class": 313,
+      "total_images": 314,
+      "image_rate": 0.9968,
+      "train_phase": "train_now",
+      "yolo_id": 7,
+      "analysis_source": "analysis label 'living_room'"
+    },
+    {
+      "name": "dining_room",
+      "group": "rooms",
+      "images_with_class": 0,
+      "total_images": 314,
+      "image_rate": 0.0,
+      "train_phase": "train_later",
+      "yolo_id": 8,
+      "analysis_source": null
+    },
+    {
+      "name": "kitchen",
+      "group": "rooms",
+      "images_with_class": 313,
+      "total_images": 314,
+      "image_rate": 0.9968,
+      "train_phase": "train_now",
+      "yolo_id": 9,
+      "analysis_source": "analysis label 'kitchen'"
+    },
+    {
+      "name": "bathroom",
+      "group": "rooms",
+      "images_with_class": 313,
+      "total_images": 314,
+      "image_rate": 0.9968,
+      "train_phase": "train_now",
+      "yolo_id": 10,
+      "analysis_source": "analysis label 'bathroom'"
+    },
+    {
+      "name": "toilet",
+      "group": "rooms",
+      "images_with_class": 0,
+      "total_images": 314,
+      "image_rate": 0.0,
+      "train_phase": "train_later",
+      "yolo_id": 11,
+      "analysis_source": "analysis label 'toilet'"
+    },
+    {
+      "name": "balcony",
+      "group": "rooms",
+      "images_with_class": 0,
+      "total_images": 314,
+      "image_rate": 0.0,
+      "train_phase": "train_later",
+      "yolo_id": 12,
+      "analysis_source": null
+    },
+    {
+      "name": "utility",
+      "group": "rooms",
+      "images_with_class": 0,
+      "total_images": 314,
+      "image_rate": 0.0,
+      "train_phase": "train_later",
+      "yolo_id": 13,
+      "analysis_source": null
+    },
+    {
+      "name": "corridor",
+      "group": "rooms",
+      "images_with_class": 0,
+      "total_images": 314,
+      "image_rate": 0.0,
+      "train_phase": "train_later",
+      "yolo_id": 14,
+      "analysis_source": null
+    },
+    {
+      "name": "bed",
+      "group": "furniture",
+      "images_with_class": 80,
+      "total_images": 314,
+      "image_rate": 0.2548,
+      "train_phase": "train_later",
+      "yolo_id": 15,
+      "analysis_source": "analysis label 'bed'"
+    },
+    {
+      "name": "wardrobe",
+      "group": "furniture",
+      "images_with_class": 80,
+      "total_images": 314,
+      "image_rate": 0.2548,
+      "train_phase": "train_later",
+      "yolo_id": 16,
+      "analysis_source": "analysis label 'wardrobe'"
+    },
+    {
+      "name": "sofa",
+      "group": "furniture",
+      "images_with_class": 80,
+      "total_images": 314,
+      "image_rate": 0.2548,
+      "train_phase": "train_later",
+      "yolo_id": 17,
+      "analysis_source": "analysis label 'sofa'"
+    },
+    {
+      "name": "chair",
+      "group": "furniture",
+      "images_with_class": 80,
+      "total_images": 314,
+      "image_rate": 0.2548,
+      "train_phase": "train_later",
+      "yolo_id": 18,
+      "analysis_source": "analysis label 'chair'"
+    },
+    {
+      "name": "dining_table",
+      "group": "furniture",
+      "images_with_class": 80,
+      "total_images": 314,
+      "image_rate": 0.2548,
+      "train_phase": "train_later",
+      "yolo_id": 19,
+      "analysis_source": "analysis label 'table'"
+    },
+    {
+      "name": "coffee_table",
+      "group": "furniture",
+      "images_with_class": 0,
+      "total_images": 314,
+      "image_rate": 0.0,
+      "train_phase": "train_later",
+      "yolo_id": 20,
+      "analysis_source": null
+    },
+    {
+      "name": "study_table",
+      "group": "furniture",
+      "images_with_class": 0,
+      "total_images": 314,
+      "image_rate": 0.0,
+      "train_phase": "train_later",
+      "yolo_id": 21,
+      "analysis_source": null
+    },
+    {
+      "name": "tv_unit",
+      "group": "furniture",
+      "images_with_class": 0,
+      "total_images": 314,
+      "image_rate": 0.0,
+      "train_phase": "train_later",
+      "yolo_id": 22,
+      "analysis_source": null
+    },
+    {
+      "name": "side_table",
+      "group": "furniture",
+      "images_with_class": 0,
+      "total_images": 314,
+      "image_rate": 0.0,
+      "train_phase": "train_later",
+      "yolo_id": 23,
+      "analysis_source": null
+    },
+    {
+      "name": "dresser",
+      "group": "furniture",
+      "images_with_class": 0,
+      "total_images": 314,
+      "image_rate": 0.0,
+      "train_phase": "train_later",
+      "yolo_id": 24,
+      "analysis_source": null
+    },
+    {
+      "name": "storage_unit",
+      "group": "furniture",
+      "images_with_class": 0,
+      "total_images": 314,
+      "image_rate": 0.0,
+      "train_phase": "train_later",
+      "yolo_id": 25,
+      "analysis_source": null
+    },
+    {
+      "name": "cabinet",
+      "group": "furniture",
+      "images_with_class": 0,
+      "total_images": 314,
+      "image_rate": 0.0,
+      "train_phase": "train_later",
+      "yolo_id": 26,
+      "analysis_source": null
+    },
+    {
+      "name": "wc",
+      "group": "fixtures",
+      "images_with_class": 80,
+      "total_images": 314,
+      "image_rate": 0.2548,
+      "train_phase": "train_later",
+      "yolo_id": 27,
+      "analysis_source": "analysis label 'toilet'"
+    },
+    {
+      "name": "wash_basin",
+      "group": "fixtures",
+      "images_with_class": 0,
+      "total_images": 314,
+      "image_rate": 0.0,
+      "train_phase": "train_later",
+      "yolo_id": 28,
+      "analysis_source": null
+    },
+    {
+      "name": "shower",
+      "group": "fixtures",
+      "images_with_class": 0,
+      "total_images": 314,
+      "image_rate": 0.0,
+      "train_phase": "train_later",
+      "yolo_id": 29,
+      "analysis_source": null
+    },
+    {
+      "name": "bathtub",
+      "group": "fixtures",
+      "images_with_class": 0,
+      "total_images": 314,
+      "image_rate": 0.0,
+      "train_phase": "train_later",
+      "yolo_id": 30,
+      "analysis_source": null
+    },
+    {
+      "name": "sink",
+      "group": "fixtures",
+      "images_with_class": 80,
+      "total_images": 314,
+      "image_rate": 0.2548,
+      "train_phase": "train_later",
+      "yolo_id": 31,
+      "analysis_source": "analysis label 'sink'"
+    },
+    {
+      "name": "stove",
+      "group": "appliances",
+      "images_with_class": 80,
+      "total_images": 314,
+      "image_rate": 0.2548,
+      "train_phase": "train_later",
+      "yolo_id": 32,
+      "analysis_source": "analysis label 'stove'"
+    },
+    {
+      "name": "refrigerator",
+      "group": "appliances",
+      "images_with_class": 0,
+      "total_images": 314,
+      "image_rate": 0.0,
+      "train_phase": "train_later",
+      "yolo_id": 33,
+      "analysis_source": null
+    },
+    {
+      "name": "washing_machine",
+      "group": "appliances",
+      "images_with_class": 0,
+      "total_images": 314,
+      "image_rate": 0.0,
+      "train_phase": "train_later",
+      "yolo_id": 34,
+      "analysis_source": null
+    },
+    {
+      "name": "microwave",
+      "group": "appliances",
+      "images_with_class": 0,
+      "total_images": 314,
+      "image_rate": 0.0,
+      "train_phase": "train_later",
+      "yolo_id": 35,
+      "analysis_source": null
+    },
+    {
+      "name": "chimney",
+      "group": "appliances",
+      "images_with_class": 0,
+      "total_images": 314,
+      "image_rate": 0.0,
+      "train_phase": "train_later",
+      "yolo_id": 36,
+      "analysis_source": null
+    }
+  ]
+}

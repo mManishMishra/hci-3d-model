@@ -1,0 +1,392 @@
+# IMPROVED_MODEL_1 — BIM-oriented YOLO segmentation taxonomy
+# 37 classes | YOLO IDs 0–36
+# Regenerate frequencies: python scripts/analyze_class_taxonomy.py
+
+schema_version: "1.0"
+task: segment
+nc: 37
+
+# Active training subset (Phase 1 prototype uses structural only)
+active_training:
+  phase: prototype_structural
+  class_ids: [0, 1, 2]
+  class_names: [wall, door, window]
+
+names:
+  0: wall
+  1: door
+  2: window
+  3: column
+  4: stair
+  5: bedroom
+  6: master_bedroom
+  7: living_room
+  8: dining_room
+  9: kitchen
+  10: bathroom
+  11: toilet
+  12: balcony
+  13: utility
+  14: corridor
+  15: bed
+  16: wardrobe
+  17: sofa
+  18: chair
+  19: dining_table
+  20: coffee_table
+  21: study_table
+  22: tv_unit
+  23: side_table
+  24: dresser
+  25: storage_unit
+  26: cabinet
+  27: wc
+  28: wash_basin
+  29: shower
+  30: bathtub
+  31: sink
+  32: stove
+  33: refrigerator
+  34: washing_machine
+  35: microwave
+  36: chimney
+
+groups:
+  structural:
+    ids: [0, 1, 2, 3, 4]
+    bim_role: building_shell
+  rooms:
+    ids: [5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+    bim_role: space_boundaries
+  furniture:
+    ids: [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26]
+    bim_role: furnishing_elements
+  fixtures:
+    ids: [27, 28, 29, 30, 31]
+    bim_role: sanitary_plumbing
+  appliances:
+    ids: [32, 33, 34, 35, 36]
+    bim_role: built_in_equipment
+
+train_phases:
+  train_now:
+    description: >
+      High corpus frequency (>=95% image presence) or critical BIM shell elements.
+      Phase 1 prototype trains structural subset (wall, door, window) only.
+    class_ids: [0, 1, 2, 5, 7, 9, 10]
+    class_names:
+      - wall
+      - door
+      - window
+      - bedroom
+      - living_room
+      - kitchen
+      - bathroom
+  train_later:
+    description: >
+      Rare, fine-grained, or furnished-plan-only classes. Enable after
+      structural model is stable and furnished subset is annotated.
+    class_ids: [3, 4, 6, 8, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36]
+
+# Per-class metadata (frequency from cleaned corpus analysis, June 2026)
+classes:
+  - id: 0
+    name: wall
+    group: structural
+    train_phase: train_now
+    image_rate: 1.0000
+    images_with_class: 314
+    cvat_color: "#FF0000"
+    annotation_type: polygon
+  - id: 1
+    name: door
+    group: structural
+    train_phase: train_now
+    image_rate: 1.0000
+    images_with_class: 314
+    cvat_color: "#00CC00"
+    annotation_type: polygon
+  - id: 2
+    name: window
+    group: structural
+    train_phase: train_now
+    image_rate: 0.9968
+    images_with_class: 313
+    cvat_color: "#0066FF"
+    annotation_type: polygon
+  - id: 3
+    name: column
+    group: structural
+    train_phase: train_later
+    image_rate: 0.0000
+    images_with_class: 0
+    cvat_color: "#9933FF"
+    annotation_type: polygon
+  - id: 4
+    name: stair
+    group: structural
+    train_phase: train_later
+    image_rate: 0.0000
+    images_with_class: 0
+    cvat_color: "#FF6600"
+    annotation_type: polygon
+  - id: 5
+    name: bedroom
+    group: rooms
+    train_phase: train_now
+    image_rate: 0.9968
+    images_with_class: 313
+    cvat_color: "#FFE066"
+    annotation_type: polygon
+  - id: 6
+    name: master_bedroom
+    group: rooms
+    train_phase: train_later
+    image_rate: 0.0000
+    images_with_class: 0
+    cvat_color: "#FFCC00"
+    annotation_type: polygon
+  - id: 7
+    name: living_room
+    group: rooms
+    train_phase: train_now
+    image_rate: 0.9968
+    images_with_class: 313
+    cvat_color: "#66CCFF"
+    annotation_type: polygon
+  - id: 8
+    name: dining_room
+    group: rooms
+    train_phase: train_later
+    image_rate: 0.0000
+    images_with_class: 0
+    cvat_color: "#99CC66"
+    annotation_type: polygon
+  - id: 9
+    name: kitchen
+    group: rooms
+    train_phase: train_now
+    image_rate: 0.9968
+    images_with_class: 313
+    cvat_color: "#FF9999"
+    annotation_type: polygon
+  - id: 10
+    name: bathroom
+    group: rooms
+    train_phase: train_now
+    image_rate: 0.9968
+    images_with_class: 313
+    cvat_color: "#66CCCC"
+    annotation_type: polygon
+  - id: 11
+    name: toilet
+    group: rooms
+    train_phase: train_later
+    image_rate: 0.0000
+    images_with_class: 0
+    cvat_color: "#CCCCCC"
+    annotation_type: polygon
+    notes: Separate WC room space; distinct from fixture class wc (id 27)
+  - id: 12
+    name: balcony
+    group: rooms
+    train_phase: train_later
+    image_rate: 0.0000
+    images_with_class: 0
+    cvat_color: "#AADD88"
+    annotation_type: polygon
+  - id: 13
+    name: utility
+    group: rooms
+    train_phase: train_later
+    image_rate: 0.0000
+    images_with_class: 0
+    cvat_color: "#DDAA88"
+    annotation_type: polygon
+  - id: 14
+    name: corridor
+    group: rooms
+    train_phase: train_later
+    image_rate: 0.0000
+    images_with_class: 0
+    cvat_color: "#BBBBBB"
+    annotation_type: polygon
+  - id: 15
+    name: bed
+    group: furniture
+    train_phase: train_later
+    image_rate: 0.2548
+    images_with_class: 80
+    cvat_color: "#8B4513"
+    annotation_type: polygon
+  - id: 16
+    name: wardrobe
+    group: furniture
+    train_phase: train_later
+    image_rate: 0.2548
+    images_with_class: 80
+    cvat_color: "#A0522D"
+    annotation_type: polygon
+  - id: 17
+    name: sofa
+    group: furniture
+    train_phase: train_later
+    image_rate: 0.2548
+    images_with_class: 80
+    cvat_color: "#CD853F"
+    annotation_type: polygon
+  - id: 18
+    name: chair
+    group: furniture
+    train_phase: train_later
+    image_rate: 0.2548
+    images_with_class: 80
+    cvat_color: "#DEB887"
+    annotation_type: polygon
+  - id: 19
+    name: dining_table
+    group: furniture
+    train_phase: train_later
+    image_rate: 0.2548
+    images_with_class: 80
+    cvat_color: "#D2691E"
+    annotation_type: polygon
+    analysis_alias: table
+  - id: 20
+    name: coffee_table
+    group: furniture
+    train_phase: train_later
+    image_rate: 0.0000
+    images_with_class: 0
+    cvat_color: "#F4A460"
+    annotation_type: polygon
+  - id: 21
+    name: study_table
+    group: furniture
+    train_phase: train_later
+    image_rate: 0.0000
+    images_with_class: 0
+    cvat_color: "#BC8F8F"
+    annotation_type: polygon
+  - id: 22
+    name: tv_unit
+    group: furniture
+    train_phase: train_later
+    image_rate: 0.0000
+    images_with_class: 0
+    cvat_color: "#696969"
+    annotation_type: polygon
+  - id: 23
+    name: side_table
+    group: furniture
+    train_phase: train_later
+    image_rate: 0.0000
+    images_with_class: 0
+    cvat_color: "#C0C0C0"
+    annotation_type: polygon
+  - id: 24
+    name: dresser
+    group: furniture
+    train_phase: train_later
+    image_rate: 0.0000
+    images_with_class: 0
+    cvat_color: "#B8860B"
+    annotation_type: polygon
+  - id: 25
+    name: storage_unit
+    group: furniture
+    train_phase: train_later
+    image_rate: 0.0000
+    images_with_class: 0
+    cvat_color: "#808080"
+    annotation_type: polygon
+  - id: 26
+    name: cabinet
+    group: furniture
+    train_phase: train_later
+    image_rate: 0.0000
+    images_with_class: 0
+    cvat_color: "#778899"
+    annotation_type: polygon
+  - id: 27
+    name: wc
+    group: fixtures
+    train_phase: train_later
+    image_rate: 0.2548
+    images_with_class: 80
+    cvat_color: "#E0E0E0"
+    annotation_type: polygon
+    analysis_alias: toilet
+    notes: WC fixture symbol; not the toilet room (id 11)
+  - id: 28
+    name: wash_basin
+    group: fixtures
+    train_phase: train_later
+    image_rate: 0.0000
+    images_with_class: 0
+    cvat_color: "#B0E0E6"
+    annotation_type: polygon
+  - id: 29
+    name: shower
+    group: fixtures
+    train_phase: train_later
+    image_rate: 0.0000
+    images_with_class: 0
+    cvat_color: "#87CEEB"
+    annotation_type: polygon
+  - id: 30
+    name: bathtub
+    group: fixtures
+    train_phase: train_later
+    image_rate: 0.0000
+    images_with_class: 0
+    cvat_color: "#4682B4"
+    annotation_type: polygon
+  - id: 31
+    name: sink
+    group: fixtures
+    train_phase: train_later
+    image_rate: 0.2548
+    images_with_class: 80
+    cvat_color: "#5F9EA0"
+    annotation_type: polygon
+  - id: 32
+    name: stove
+    group: appliances
+    train_phase: train_later
+    image_rate: 0.2548
+    images_with_class: 80
+    cvat_color: "#FF4500"
+    annotation_type: polygon
+  - id: 33
+    name: refrigerator
+    group: appliances
+    train_phase: train_later
+    image_rate: 0.0000
+    images_with_class: 0
+    cvat_color: "#C71585"
+    annotation_type: polygon
+  - id: 34
+    name: washing_machine
+    group: appliances
+    train_phase: train_later
+    image_rate: 0.0000
+    images_with_class: 0
+    cvat_color: "#4169E1"
+    annotation_type: polygon
+  - id: 35
+    name: microwave
+    group: appliances
+    train_phase: train_later
+    image_rate: 0.0000
+    images_with_class: 0
+    cvat_color: "#DA70D6"
+    annotation_type: polygon
+  - id: 36
+    name: chimney
+    group: appliances
+    train_phase: train_later
+    image_rate: 0.0000
+    images_with_class: 0
+    cvat_color: "#2F4F4F"
+    annotation_type: polygon
