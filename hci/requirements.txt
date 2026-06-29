@@ -1,0 +1,15 @@
+# Existing requirements here...
+# e.g. fastapi, uvicorn, etc.
+fastapi
+uvicorn
+# Add your custom modules/packages here
+# If 'auto_label' and 'logic' are local directories with __init__.py files
+# and you want to install them as editable packages:
+# - you might need to navigate to their respective directories and run `pip install -e .`
+# For now, let's assume they might be installable or that this helps python find them
+auto_label
+logic
+# Add any other dependencies you know are missing or needed by these modules
+# For example, if auto_label needs numpy or opencv, add them here.
+# numpy
+# opencv-python
