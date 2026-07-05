@@ -1,0 +1,26 @@
+{
+  "image_path": "D:\\HCI_interor\\IMPROVED_MODEL_1\\data\\prototype_dataset\\images\\train\\009b1b7a-ff37-4d1a-9d6c-47b8bd4862b2.jpg",
+  "original_width": 775,
+  "original_height": 1280,
+  "output_shape": [
+    1280,
+    775,
+    3
+  ],
+  "metadata": {
+    "source_format": "jpeg",
+    "steps": [
+      "grayscale",
+      "deskew",
+      "denoise",
+      "adaptive_threshold",
+      "morph_noise_removal",
+      "normalize",
+      "resize"
+    ],
+    "deskew_angle_deg": 0.0,
+    "output_width": 775,
+    "output_height": 1280,
+    "long_edge_px": 1280
+  }
+}

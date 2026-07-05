@@ -1,0 +1,13 @@
+{
+  "total": 314,
+  "has_walls": 314,
+  "has_doors": 314,
+  "has_windows": 313,
+  "has_rooms": 313,
+  "has_furniture": 80,
+  "styles": {
+    "line_drawing": 271,
+    "furnished_color": 42,
+    "color_rendered": 1
+  }
+}

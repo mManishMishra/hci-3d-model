@@ -1,0 +1,19 @@
+{
+  "corpus_total": 314,
+  "corpus_walls": 314,
+  "corpus_doors": 314,
+  "corpus_windows": 314,
+  "corpus_furnished_style": 42,
+  "selected_styles": {
+    "line_drawing": 34,
+    "furnished_color": 15,
+    "color_rendered": 1
+  },
+  "selected_complexity": {
+    "high": 50
+  },
+  "selected_priority": {
+    "P1": 49,
+    "P2": 1
+  }
+}

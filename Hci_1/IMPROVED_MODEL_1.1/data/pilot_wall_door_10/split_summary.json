@@ -1,0 +1,21 @@
+{
+  "batch_root": "D:\\HCI_interor\\IMPROVED_MODEL_1.1\\data\\pilot_wall_door_10",
+  "manifest": "D:\\HCI_interor\\IMPROVED_MODEL_1.1\\data\\pilot_wall_door_10\\manifest.csv",
+  "train_max_rank": 20,
+  "train_count": 7,
+  "val_count": 3,
+  "train": [
+    "244a80fe000e5b8728c17211b2b7525d.jpg",
+    "6ba1d00d-4ec7-4123-996b-50fe3a14af79.jpg",
+    "358ffd35-b79e-46c1-934c-1ce9543958f2.jpg",
+    "628d81db0bbddc6884c25a85ddd7e278.jpg",
+    "6549ac644ce535a6039b8b8bfdc68f6e.jpg",
+    "65fce43ecf1817bc941558229757c178.jpg",
+    "714aced82de7341fa2677af01c144ec9.jpg"
+  ],
+  "val": [
+    "34e2afcc-abab-450e-8c36-61250c881347.jpg",
+    "69a35f1cab485159de27a6085a5a9813.jpg",
+    "0b79a51a-bede-49d3-b746-44351f4fd1ba.jpg"
+  ]
+}

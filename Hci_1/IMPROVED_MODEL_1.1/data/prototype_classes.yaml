@@ -1,0 +1,18 @@
+# DEPRECATED — use data/prototype_7_classes.yaml (7-class locked training config)
+# IMPROVED_MODEL_1 — legacy 3-class reference (do not use for training)
+
+path: D:/HCI_interor/IMPROVED_MODEL_1/data/prototype_dataset
+train: images/train
+val: images/val
+
+nc: 3
+
+names:
+  0: wall
+  1: door
+  2: window
+
+# Class IDs (for CVAT label map)
+# wall   = 0
+# door   = 1
+# window = 2

@@ -1,0 +1,11 @@
+# HCI Floor Plan Trainer — Python dependencies
+# Install: pip install -r requirements.txt
+# PyTorch: on some platforms install torch separately first (see pytorch.org).
+
+fastapi
+uvicorn[standard]
+python-multipart
+numpy
+opencv-python
+ultralytics>=8.3
+torch

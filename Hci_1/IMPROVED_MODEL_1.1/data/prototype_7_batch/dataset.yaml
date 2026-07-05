@@ -1,0 +1,12 @@
+path: D:/HCI_interor/IMPROVED_MODEL_1/data/prototype_7_batch
+train: images/train
+val: images/val
+nc: 7
+names:
+  0: wall
+  1: door
+  2: window
+  3: bedroom
+  4: living_room
+  5: kitchen
+  6: bathroom
