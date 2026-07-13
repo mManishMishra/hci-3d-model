@@ -1,0 +1,16 @@
+{
+  "training_completed": true,
+  "best_pt": "D:\\HCI_interor\\cubicasa_pilot_100_trainset\\runs\\pilot100_offline\\weights\\best.pt",
+  "metrics": {
+    "box_mAP50": 0.08170192770879543,
+    "box_mAP50_95": 0.02714071826506507,
+    "mask_mAP50": 0.09137624972879166,
+    "mask_mAP50_95": 0.030278863712071148,
+    "epoch": 40.0
+  },
+  "n_pilot_preds": 20,
+  "n_bg_preds": 20,
+  "best_gdrive_modified": false,
+  "gdrive_dataset_modified": false,
+  "batch": 4
+}

@@ -1,0 +1,22 @@
+Day-2 Phase 2 comparison summary
+training_completed: True
+best_pt: D:\HCI_interor\cubicasa_pilot_100_trainset\runs\pilot100_offline\weights\best.pt
+batch_used: 4
+box_mAP50: 0.08170192770879543
+box_mAP50_95: 0.02714071826506507
+mask_mAP50: 0.09137624972879166
+mask_mAP50_95: 0.030278863712071148
+per_class:
+  mask_AP50 Room: 0.3595
+  mask_AP50 Window: 0.0050
+  mask_AP50 Door: 0.0000
+  mask_AP50 Wall: 0.0010
+pilot_val_pred_images: 20
+best_gdrive_val_pred_images: 20
+best_gdrive_pt_modified: False
+gdrive_dataset_modified: False
+quality_notes:
+  - Visual review folder: eval/preds_val vs eval/preds_best_gdrive (same 20 val IDs).
+  - Room: pilot should show large filled polygons; best_gdrive often empty/fragmented on CubiCasa.
+  - Window/Door: pilot should localize openings; best_gdrive may miss or mis-class under 17-head model.
+  - Wall: pilot should show structural ribbons; best_gdrive historically weak (mAP~0).

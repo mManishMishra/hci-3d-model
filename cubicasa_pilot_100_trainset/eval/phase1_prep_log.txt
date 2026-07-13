@@ -1,0 +1,11 @@
+Day-2 Phase 1 prep log
+seed_equivalent: approved VAL list (Python Random(42) lists)
+train_images: 80
+train_labels: 80
+val_images: 20
+val_labels: 20
+overlap: 0
+pairing_failures: 0
+empty_labels: 0
+invalid_labels: 0
+dataset_yaml: True
