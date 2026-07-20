@@ -1,0 +1,10 @@
+path: D:\HCI_interor\cubicasa_hqa_500
+train: images/train
+val: images/val
+
+nc: 4
+names:
+  0: Room
+  1: Window
+  2: Door
+  3: Wall

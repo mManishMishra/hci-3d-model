@@ -1,0 +1,4 @@
+Official HQA val QA
+PASS: 245
+WARN: 0
+FAIL: 0
