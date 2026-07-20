@@ -1,0 +1,27 @@
+# Trigger this script ONLY when code is pushed to the vaishnavi branch
+on:
+  push:
+    branches:
+      - vaishnavi
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    steps:
+      - name: Execute Deployment Commands
+        run: |
+          # 1. Navigate to the repository folder
+          cd C:\Projects\bim-project\hci-3d-model
+          
+          # 2. Force the server to exactly match the vaishnavi branch on GitHub
+          git fetch origin
+          git reset --hard origin/vaishnavi
+          
+          # 3. Ensure all Python libraries are installed (just in case Surbhi added new ones)
+          cd web
+          pip install ultralytics flask fastapi uvicorn requests python-multipart
+          
+          # 4. Restart the PM2 process to apply the new code
+          pm2 restart ai-training-module
+          pm2 save --force
